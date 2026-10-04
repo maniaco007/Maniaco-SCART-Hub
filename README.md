@@ -2,7 +2,7 @@
 
 **[English](README.en.md)**
 
-**Troca automática do perfil da GBS-8200 conforme o console escolhido no switch SCART: liga o console e a imagem já vem certa, sem cabo entre o switch e a GBS e sem mexer no firmware da GBS.**
+**Troca automática do perfil da GBS-Control conforme o console escolhido no switch SCART: liga o console e a imagem já vem certa, sem cabo entre o switch e a GBS e sem mexer no firmware da GBS.**
 
 Um projeto do blog **[Maniaco Game Room](https://www.maniacogameroom.com.br/)**.
 
