@@ -1,4 +1,5 @@
-# Maniaco SCART Hub
+
+<img width="3132" height="1344" alt="Gemini_Generated_Image_55aosa55aosa55ao" src="https://github.com/user-attachments/assets/1eb6f17e-fe90-484d-8567-c729e9fd691d" />
 
 **[English](README.en.md)**
 
