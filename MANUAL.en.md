@@ -120,7 +120,7 @@ Switch **unplugged**. 5 V goes last.
 
 > ⚠️ **5 V connector open** for the whole flashing process ([why](#9-power-usb-and-5-v)).
 
-**From the browser (easiest):** open the installer at [maniacogameroom.com.br](https://www.maniacogameroom.com.br/) in **Chrome** or **Edge** on a computer, plug the ESP32-C3 into USB, click **Instalar** (Install), pick the port and, on a first install, accept **erasing** the device.
+**From the browser (easiest):** open the [Maniaco SCART Hub installer](https://www.maniacogameroom.com.br/instalar/maniaco-scart-hub/) in **Chrome** or **Edge** on a computer, plug the ESP32-C3 into USB, click **Instalar** (Install), pick the port and, on a first install, accept **erasing** the device.
 
 **With `esptool`:**
 

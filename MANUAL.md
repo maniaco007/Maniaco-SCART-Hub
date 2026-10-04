@@ -118,7 +118,7 @@ Switch **desligado da tomada**. O 5 V fica por último.
 
 > ⚠️ **Conector de 5 V aberto** durante toda a gravação ([por quê](#9-alimentação-usb-e-5-v)).
 
-**Pelo navegador (o mais fácil):** abra o instalador no site [maniacogameroom.com.br](https://www.maniacogameroom.com.br/) com o **Chrome** ou o **Edge** num computador, conecte o ESP32-C3 no USB, clique em **Instalar**, escolha a porta e, na primeira instalação, aceite **apagar** o aparelho.
+**Pelo navegador (o mais fácil):** abra o [instalador do Maniaco SCART Hub](https://www.maniacogameroom.com.br/instalar/maniaco-scart-hub/) com o **Chrome** ou o **Edge** num computador, conecte o ESP32-C3 no USB, clique em **Instalar**, escolha a porta e, na primeira instalação, aceite **apagar** o aparelho.
 
 **Pelo `esptool`:**
 

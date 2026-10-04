@@ -29,7 +29,7 @@ Um projeto do blog **[Maniaco Game Room](https://www.maniacogameroom.com.br/)**.
 
 1. Baixe o firmware na página de **[Releases](../../releases)**.
 2. Meça o seu switch, monte a placa com o ESP32-C3 e os resistores e ligue no switch (o 5 V por último).
-3. Grave o firmware pelo USB, **com o fio de 5 V do switch desconectado**.
+3. Grave o firmware pelo USB, **com o fio de 5 V do switch desconectado**: pelo [instalador no navegador](https://www.maniacogameroom.com.br/instalar/maniaco-scart-hub/) (Chrome ou Edge no computador) ou pelo `esptool`.
 4. No celular, entre na rede `gbscontrol` da GBS, abra `http://192.168.4.20`, clique em **Identificar portas** e escolha o perfil de cada console.
 
 Passo a passo completo, com as medições, a montagem e todas as opções: **[Manual](MANUAL.md)**.
