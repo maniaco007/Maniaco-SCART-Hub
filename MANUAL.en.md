@@ -61,13 +61,13 @@ Multimeter only, **before soldering anything**.
 1. Locate the two **ULN2003** (16-pin chips near the relays). Pin 1 is on the side of the dot on the chip; pins 1 to 7 are the inputs.
 2. Follow the trace of each input to the **SMD resistor** connected to it (usually marked "472").
 3. In continuity mode, find which **pad** of that resistor reads **0 Ω to the ULN pin**: that is the ULN-side pad, where you will solder.
-4. Find the switch's **5 V converter output capacitor** (near the DC input): its + and − will be your 5 V and GND.
+4. Find the switch's **input 5 V**: a terminal wired straight to the power connector (on the switch in the photos, the terminal next to the **5V IN** connector). Also find a wide **GND** point and confirm in continuity mode that it reads 0 Ω to the power connector's GND.
 
-**With the switch on and one console on** (wait for the relay click), black probe on the capacitor's −, multimeter on DC:
+**With the switch on and one console on** (wait for the relay click), black probe on GND, multimeter on DC:
 
 | Where | Expected |
 |---|---|
-| + of the converter capacitor | ~4.5 to 5 V |
+| Input 5 V | ~4.5 to 5 V |
 | Resistor pad of the active port (ULN side) | ~3.3 to 3.8 V |
 | Pads of the other ports | ~0 V |
 
@@ -106,6 +106,8 @@ Repeat for every port. What to do with the result:
 
 ![Solder side: where each wire goes](imagens/placa-fios.png)
 
+![The finished board: resistors standing on both sides and the capacitor in the 5V corner](imagens/placa-pronta.jpg)
+
 ---
 
 ## 4. Wiring it to the switch
@@ -118,11 +120,20 @@ The photos below are from an **AUTO EUR-SCART 10IN1OUT** switch (board 2024-03-1
 
 ![Where to take 5 V from](imagens/switch-5v.png)
 
-1. **GND:** wire from the ESP32-C3 **G** pin to the converter capacitor **−**, or a wide GND pad. Never to ULN pin 8.
+1. **GND:** wire from the ESP32-C3 **G** pin to the GND point from section 2 (in the photos, the grey pad). Never to ULN pin 8.
 2. **Lines:** one wire from the outer leg of each resistor to the **ULN-side resistor pad** of one port (section 2). Route the GPIO 20 and 21 wires away from the ESP32-C3 antenna.
-3. **5 V:** wire from the converter capacitor **+** to the **2-pin connector**, and from the connector to the **5V** pin. **Leave the connector open** until the end of section 6.
+3. **5 V:** wire from the **input 5 V** (in the photos, the terminal next to the 5V IN connector) to the **2-pin connector**, and from the connector to the **5V** pin. **Leave the connector open** until the end of section 6.
 4. Label the connector: **"5V: disconnect before USB"**.
 5. With the multimeter, check each new solder joint against its neighbours: never zero.
+6. **Secure the wires** to the switch board with electrical tape near the rows, so a tug won't rip the pads off.
+
+How it looks on the switch in the photos:
+
+![The board installed in the corner of the switch, with the red 5 V wire coming from the input and the line wires going to both rows](imagens/instalada-no-switch.jpg)
+
+![The wires soldered to both rows, held with electrical tape](imagens/fios-nas-fileiras.jpg)
+
+![Close-up of the installed board, next to SYNC OUT](imagens/instalada-detalhe.jpg)
 
 ---
 

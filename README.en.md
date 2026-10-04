@@ -12,7 +12,7 @@ A **[Maniaco Game Room](https://www.maniacogameroom.com.br/)** project.
 
 | | |
 |---|---|
-| ![Assembled board with the ESP32-C3](imagens/placa-montada.jpg) | ![Page on a phone](imagens/pagina-celular.png) |
+| ![ESP32-C3 board installed in the switch](imagens/instalada-no-switch.jpg) | ![Page on a phone](imagens/pagina-celular.png) |
 
 - **Automatic profile switching:** an ESP32-C3 SuperMini inside the switch reads which port is active and, over the GBS's own Wi-Fi, makes it load that console's profile in about 1.5 s.
 - **Follows the switch's own decision:** the switch stays on the last console turned on and goes back to the previous one when it turns off. Maniaco SCART Hub just follows along.
@@ -47,7 +47,7 @@ Full step-by-step, with measurements, assembly and every option: **[Manual](MANU
 ## Warning
 
 - **Never connect USB and the switch's 5 V at the same time.** On the ESP32-C3 SuperMini, the 5V pin is the USB VBUS itself. To use the USB cable with the board installed, disconnect the 5 V wire first. See [Power: USB and 5 V](MANUAL.en.md#9-power-usb-and-5-v).
-- **Do not solder to the ULN2003 pins** (1.27 mm pitch): the lines are taken from the pads of the resistors connected to them, and 5 V and GND from the switch's converter output capacitor.
+- **Do not solder to the ULN2003 pins** (1.27 mm pitch): the lines are taken from the pads of the resistors connected to them, and 5 V and GND from the switch's power input.
 - Installation means soldering inside a mains-powered device connected to other equipment. **Do it at your own risk**, always with the switch unplugged.
 - Maniaco SCART Hub is **not affiliated** with the gbs-control project or with the makers of the GBS-Control, the ESP32-C3 or the switch.
 

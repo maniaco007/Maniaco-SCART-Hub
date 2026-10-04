@@ -59,13 +59,13 @@ Só multímetro, **antes de soldar qualquer coisa**.
 1. Localize os dois **ULN2003** (chips de 16 pinos perto dos relés). O pino 1 fica do lado da bolinha gravada no chip; os pinos 1 a 7 são as entradas.
 2. Siga a trilha de cada entrada até o **resistor SMD** ligado a ela (geralmente marcado "472").
 3. Em continuidade, descubra qual **pad** desse resistor tem **0 Ω até o pino do ULN**: é o pad do lado do ULN, onde você vai soldar.
-4. Ache o **capacitor de saída do conversor** de 5 V (perto da entrada DC): o + e o − dele serão o 5 V e o GND.
+4. Ache o **5 V da entrada** do switch: um terminal ligado direto ao conector de alimentação (no switch das fotos, o terminal junto do conector **5V IN**). Ache também um ponto de **GND** largo e confirme por continuidade que ele tem 0 Ω até o GND do conector de alimentação.
 
-**Com o switch ligado e um console ligado** (espere o relé clicar), ponta preta no − do capacitor, multímetro em DC:
+**Com o switch ligado e um console ligado** (espere o relé clicar), ponta preta no GND, multímetro em DC:
 
 | Onde | Esperado |
 |---|---|
-| + do capacitor do conversor | ~4,5 a 5 V |
+| 5 V da entrada | ~4,5 a 5 V |
 | Pad do resistor da porta ativa (lado do ULN) | ~3,3 a 3,8 V |
 | Pads das outras portas | ~0 V |
 
@@ -104,6 +104,8 @@ Repita para cada porta. O que fazer com o resultado:
 
 ![Lado da solda: onde vai cada fio](imagens/placa-fios.png)
 
+![A placa pronta: resistores em pé dos dois lados e o capacitor no canto do 5V](imagens/placa-pronta.jpg)
+
 ---
 
 ## 4. Ligar no switch
@@ -116,11 +118,20 @@ As fotos abaixo são de um switch **AUTO EUR-SCART 10IN1OUT** (placa 2024-03-17-
 
 ![Onde tirar o 5 V](imagens/switch-5v.png)
 
-1. **GND:** fio do pino **G** do ESP32-C3 até o **−** do capacitor do conversor, ou uma ilha larga de GND. Nunca no pino 8 do ULN.
+1. **GND:** fio do pino **G** do ESP32-C3 até o ponto de GND da seção 2 (nas fotos, o pad em cinza). Nunca no pino 8 do ULN.
 2. **Linhas:** um fio da perna de fora de cada resistor até o **pad do resistor do lado do ULN** de uma porta (seção 2). Passe os fios dos GPIO 20 e 21 longe da antena do ESP32-C3.
-3. **5 V:** fio do **+** do capacitor do conversor até o **conector de 2 pinos**, e do conector até o pino **5V**. **Deixe o conector aberto** até o fim da seção 6.
+3. **5 V:** fio do **5 V da entrada** (nas fotos, o terminal junto do conector 5V IN) até o **conector de 2 pinos**, e do conector até o pino **5V**. **Deixe o conector aberto** até o fim da seção 6.
 4. Etiquete o conector: **"5V: desligar antes do USB"**.
 5. Confira com o multímetro, entre cada solda nova e as vizinhas: nunca zero.
+6. **Prenda os fios** na placa do switch com fita isolante, perto das fileiras, para que um puxão não arranque os pads.
+
+Como ficou no switch das fotos:
+
+![A placa instalada no canto do switch, com o fio vermelho do 5 V vindo da entrada e os fios das linhas indo às duas fileiras](imagens/instalada-no-switch.jpg)
+
+![Os fios soldados nas duas fileiras, presos com fita isolante](imagens/fios-nas-fileiras.jpg)
+
+![Detalhe da placa instalada, ao lado do SYNC OUT](imagens/instalada-detalhe.jpg)
 
 ---
 
