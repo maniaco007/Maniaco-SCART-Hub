@@ -82,6 +82,8 @@ Repita para cada porta. O que fazer com o resultado:
 
 ## 3. Montar a placa
 
+> **Desenho furo por furo:** a [página interativa de montagem](https://www.maniacogameroom.com.br/montagem/maniaco-scart-hub/) mostra a placa de 12 × 9 furos vista de cima e por baixo. Também há o [tutorial de montagem](https://www.maniacogameroom.com.br/2026/10/maniaco-scart-hub-montagem-da-placa) no blog.
+
 1. **Solde o ESP32-C3 na placa perfurada** com a barra de pinos macho, com o **USB-C na borda** da placa (para plugar o cabo depois de instalado).
 2. **Resistores de 10 kΩ em pé**, um ao lado de cada GPIO usado: corpo no furo de fora, perna dobrada no furo vizinho ao pino. Por baixo, faça a ponte entre o pino e essa perna. Ponha espaguete (termo-retrátil fino) nas pernas dobradas, se ficarem perto umas das outras.
 3. **GPIOs usados** (a ordem não importa, a página identifica depois):
@@ -100,11 +102,19 @@ Repita para cada porta. O que fazer com o resultado:
 | Pernas de fora de dois resistores vizinhos | Nunca zero |
 | 5V e G | Sobe devagar (o capacitor carregando), nunca zero |
 
+![Lado da solda: onde vai cada fio](imagens/placa-fios.png)
+
 ---
 
 ## 4. Ligar no switch
 
 Switch **desligado da tomada**. O 5 V fica por último.
+
+As fotos abaixo são de um switch **AUTO EUR-SCART 10IN1OUT** (placa 2024-03-17-DJF). Em outro modelo, use os pontos que você achou na seção 2.
+
+![Onde ligar as 10 linhas e o GND](imagens/switch-linhas-e-gnd.png)
+
+![Onde tirar o 5 V](imagens/switch-5v.png)
 
 1. **GND:** fio do pino **G** do ESP32-C3 até o **−** do capacitor do conversor, ou uma ilha larga de GND. Nunca no pino 8 do ULN.
 2. **Linhas:** um fio da perna de fora de cada resistor até o **pad do resistor do lado do ULN** de uma porta (seção 2). Passe os fios dos GPIO 20 e 21 longe da antena do ESP32-C3.

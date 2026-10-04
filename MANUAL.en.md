@@ -84,6 +84,8 @@ Repeat for every port. What to do with the result:
 
 ## 3. Building the board
 
+> **Hole-by-hole drawing:** the [interactive assembly page](https://www.maniacogameroom.com.br/montagem/maniaco-scart-hub/) (in Portuguese) shows the 12 × 9 hole board from the top and from below. There is also an [assembly tutorial](https://www.maniacogameroom.com.br/2026/10/maniaco-scart-hub-montagem-da-placa) on the blog (in Portuguese).
+
 1. **Solder the ESP32-C3 to the perfboard** with male pin headers, with the **USB-C at the board edge** (so you can plug in the cable after installation).
 2. **10 kΩ resistors standing up**, one next to each GPIO used: body in the outer hole, bent leg in the hole next to the pin. On the solder side, bridge the pin to that leg. Put thin heat-shrink on the bent legs if they end up close to each other.
 3. **GPIOs used** (order doesn't matter, the page identifies them later):
@@ -102,11 +104,19 @@ Repeat for every port. What to do with the result:
 | Outer legs of two neighbouring resistors | Never zero |
 | 5V and G | Rises slowly (capacitor charging), never zero |
 
+![Solder side: where each wire goes](imagens/placa-fios.png)
+
 ---
 
 ## 4. Wiring it to the switch
 
 Switch **unplugged**. 5 V goes last.
+
+The photos below are from an **AUTO EUR-SCART 10IN1OUT** switch (board 2024-03-17-DJF), with labels in Portuguese. On another model, use the points you found in section 2.
+
+![Where to connect the 10 lines and GND](imagens/switch-linhas-e-gnd.png)
+
+![Where to take 5 V from](imagens/switch-5v.png)
 
 1. **GND:** wire from the ESP32-C3 **G** pin to the converter capacitor **−**, or a wide GND pad. Never to ULN pin 8.
 2. **Lines:** one wire from the outer leg of each resistor to the **ULN-side resistor pad** of one port (section 2). Route the GPIO 20 and 21 wires away from the ESP32-C3 antenna.
