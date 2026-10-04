@@ -2,7 +2,7 @@
 
 **[Versão em português](MANUAL.md)**
 
-Maniaco SCART Hub makes the **GBS-8200** load the profile of the console selected by your **automatic SCART switch** on its own. An ESP32-C3 SuperMini installed inside the switch reads which port is active and tells the GBS over the GBS's own Wi-Fi. This manual covers the measurements, the assembly, flashing the firmware and the configuration page.
+Maniaco SCART Hub makes the **GBS-Control** load the profile of the console selected by your **automatic SCART switch** on its own. An ESP32-C3 SuperMini installed inside the switch reads which port is active and tells the GBS over the GBS's own Wi-Fi. This manual covers the measurements, the assembly, flashing the firmware and the configuration page.
 
 A **[Maniaco Game Room](https://www.maniacogameroom.com.br/)** project.
 
@@ -33,7 +33,7 @@ A **[Maniaco Game Room](https://www.maniacogameroom.com.br/)** project.
 
 - an **ESP32-C3 SuperMini**;
 - a **10-port automatic SCART switch** with 2× ULN2003 driving the relays;
-- a **GBS-8200 with gbs-control**, using its own network (`gbscontrol`);
+- a **GBS-Control**, using its own network (`gbscontrol`);
 - 10× **10 kΩ** resistors (1/4 W), a **470 µF / 10 V** electrolytic capacitor, a **2-pin connector** (male/female header), a small perfboard (~12 × 9 holes) and thin wire (26 to 30 AWG);
 - a multimeter, a fine-tip soldering iron and a USB-C data cable.
 

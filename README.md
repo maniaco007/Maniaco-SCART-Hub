@@ -38,7 +38,7 @@ Passo a passo completo, com as medições, a montagem e todas as opções: **[Ma
 
 - **ESP32-C3 SuperMini.**
 - **Switch SCART automático de 10 portas** com 2× ULN2003 acionando os relés. Testado num modelo com as linhas de seleção ativas em nível alto (~3,7 V). Switches com outra eletrônica precisam ser medidos antes (o manual mostra como).
-- **GBS-8200 com gbs-control**, usando a rede própria (`gbscontrol`, senha padrão). Testado com o [GBS-Control PT-BR](https://github.com/maniaco007/Projeto-GBSC---BR-by-Maniaco) v1.0.4.
+- **GBS-Control**, usando a rede própria (`gbscontrol`, senha padrão). Testado com o [GBS-Control PT-BR](https://github.com/maniaco007/Projeto-GBSC---BR-by-Maniaco) v1.0.4.
 - 10 resistores de 10 kΩ, capacitor de 470 µF / 10 V, conector de 2 pinos, placa perfurada pequena e fio fino.
 - Para gravar: Chrome ou Edge num computador (instalador pelo navegador), ou o `esptool`; cabo USB-C de dados.
 
@@ -47,7 +47,7 @@ Passo a passo completo, com as medições, a montagem e todas as opções: **[Ma
 - **USB e 5 V do switch nunca juntos.** No ESP32-C3 SuperMini, o pino 5V é o próprio VBUS do USB. Para usar o cabo USB com a placa instalada, desconecte antes o fio de 5 V. Veja [Alimentação: USB e 5 V](MANUAL.md#9-alimentação-usb-e-5-v).
 - **Não solde nos pinos dos ULN2003** (passo de 1,27 mm): as linhas saem dos pads dos resistores ligados a eles, e o 5 V e o GND do capacitor de saída do conversor do switch.
 - A montagem envolve solda dentro de um aparelho ligado à tomada e a outros equipamentos. **Faça por sua conta e risco**, sempre com o switch desligado.
-- O Maniaco SCART Hub **não é afiliado** ao projeto gbs-control nem aos fabricantes da GBS-8200, do ESP32-C3 ou do switch.
+- O Maniaco SCART Hub **não é afiliado** ao projeto gbs-control nem aos fabricantes da GBS-Control, do ESP32-C3 ou do switch.
 
 ## Créditos
 
